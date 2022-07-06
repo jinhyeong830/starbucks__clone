@@ -1,0 +1,98 @@
+/*common*/
+ body{
+    
+    font-family:'Nanum Gothic', sans-serif;
+} 
+
+
+/*돋보기*/
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 40;
+
+  font-size:25px;
+  border:1px solid #c8c8c8;
+  border-radius: 3px;
+  color: #000;
+  background-color: white;
+ 
+}
+/*header*/
+header{
+    background-color: #f6f5ef;
+    border-bottom: 1px solid #c8c8c8;
+}
+
+header .inner{
+    
+    max-width: 1100px;
+    height: 120px;
+    display: flex;
+    position: relative;
+    margin:0 auto;
+   
+}
+
+/*logo*/
+header .inner .header__logo{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 120px;
+}
+
+header .inner .header__logo a{
+
+}
+header .inner .header__logo a img{
+    height: 75px;
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+}
+/*serve menu*/
+
+header .inner .header__servemenu{
+    display: flex;
+    right:10px;
+    top: 10px;
+    position: absolute;
+    
+    
+}
+header .inner .header__servemenu a li{
+    text-decoration: none;
+    color: #656565;
+    margin:10px 0;
+    font-size: 13px;
+}
+header .inner .header__servemenu a li:hover{
+    color: #000;
+    text-decoration: underline;
+    /* cursor: */
+}
+header .inner .header__servemenu a li{
+    display: inline-block;
+    
+}
+
+header .inner .header__servemenu span{
+    margin-left: 10px;
+
+}
+
+
+header .inner .header__servemenu>a:not(:nth-child(1))>li::before{
+    
+        content: "|";
+        color: rgb(206, 200, 193);
+        font-weight: 700;
+        padding: 0 15px;
+}
