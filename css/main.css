@@ -1,98 +1,358 @@
-/*common*/
- body{
-    
-    font-family:'Nanum Gothic', sans-serif;
-} 
-
-
-/*돋보기*/
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 300,
-  'GRAD' 0,
-  'opsz' 40;
-
-  font-size:25px;
-  border:1px solid #c8c8c8;
-  border-radius: 3px;
-  color: #000;
-  background-color: white;
- 
+/* COMMON */
+body{
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4; /*배수로 주는게 정신건강에 조타*/
+    font-family: 'Nanum Gothic', sans-serif;
+    height: 3000px;
 }
-/*header*/
-header{
-    background-color: #f6f5ef;
-    border-bottom: 1px solid #c8c8c8;
+a{
+    text-decoration: none;
 }
 
-header .inner{
-    
-    max-width: 1100px;
-    height: 120px;
-    display: flex;
+.inner{
     position: relative;
-    margin:0 auto;
+    width: 1100px;
+    margin: 0 auto;
+    
+
+}
+
+/* HEADER */
+header{
+    z-index:1;
+    width: 100%;
+    position: fixed;
+    background-color: #f6f5ef;
+    border: 1px solid #c8c8c8;
+    top: 0;
+}
+
+header>.inner {
+    background-color: #f6f5ef;
+    height: 120px;
+}
+
+
+/*logo*/
+header .inner a.logo{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 75px;/*높이 기준이 있어야, 세로 중앙정렬이 됨*/
+}
+
+header .inner .logo img{
+    display: block;
+}
+
+/*sub-menu*/
+header .inner .sub_menu{
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+header .inner .sub_menu .menu{
+    display: flex;
+}
+
+header .inner .sub_menu .menu li{
+    line-height: 32px;
+    /*글자사이즈+ 상하 패딩=32*/
+}
+
+header .inner .sub_menu .menu li:not(:last-child):after{
+    content: "|";
+    font-size: 12px;
+    color: #c8c8c8;
+}
+
+header .inner .sub_menu .menu li a{
+    font-size: 12px;
+    color: #656565;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+header .inner .sub_menu .menu li a:hover{
+    text-decoration: underline;
+}
+
+
+/*search*/
+
+header .inner .search{
+    position: relative;
+}
+
+header .inner .search input{
+    width: 40px;
+    height: 34px;
+    transition: 0.4s;
+    font-size: 16px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+header .inner .search input:focus{
+    width: 180px;
+    outline-color: #1e39;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+header .inner .search span{
+    position: absolute;
+    right: 3px;
+    font-size: 24px;
+    height: 24px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+/*main menu*/
+
+header .inner .main_menu{
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+header .inner .main_menu .item{
+  
+}
+
+header .inner .main_menu .item .item__name{
+    padding: 10px 20px 34px 20px;
+    font-size: 13px;
+
+
+}
+
+header .inner .main_menu .item:hover .item__name{
+    Background-color: #2c2a29;
+    Color: #669900;
+    text-decoration: underline;
+    cursor: pointer;
+
+}
+
+
+header .inner .main_menu .item .item__content{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    display: none;
+    
+}
+
+header .inner .main_menu .item:hover .item__content{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    display: block;
    
 }
 
-/*logo*/
-header .inner .header__logo{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    height: 120px;
+header .inner .main_menu .item .item__content .item__content__menu{
+    Background-color: #2c2a29;
+    padding: 20px 0;
+    width: 100%;
+    
 }
 
-header .inner .header__logo a{
 
-}
-header .inner .header__logo a img{
-    height: 75px;
-    display: block;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 20px;
-}
-/*serve menu*/
-
-header .inner .header__servemenu{
+header .inner .main_menu .item .item__content .item__content__menu .inner{
     display: flex;
-    right:10px;
-    top: 10px;
-    position: absolute;
-    
-    
+    flex-wrap: wrap;
+   
 }
-header .inner .header__servemenu a li{
-    text-decoration: none;
-    color: #656565;
-    margin:10px 0;
-    font-size: 13px;
+header .inner .main_menu .item .item__content .item__content__menu .inner>li{
+    width: 200px;
+    padding-right: 20px;
+   
 }
-header .inner .header__servemenu a li:hover{
-    color: #000;
+
+header .inner .main_menu .item .item__content .item__content__menu .inner>li>a{
+    color: white;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+header .inner .main_menu .item .item__content .item__content__menu .inner>li>a:hover{
     text-decoration: underline;
-    /* cursor: */
 }
-header .inner .header__servemenu a li{
-    display: inline-block;
+header .inner .main_menu .item .item__content .item__content__menu .inner>li>ul{
+   
+}
+
+header .inner .main_menu .item .item__content .item__content__menu .inner>li>ul>li{
+    color: #999;
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+header .inner .main_menu .item .item__content .item__content__menu .inner>li>ul>li:hover{
+    text-decoration: underline;
+    cursor:pointer;
+}
+
+header .inner .main_menu .item .item__content .item__content__additional{
+    background-image: url("../images/main_menu_pattern.jpg");
+    background-repeat: repeat;
+   padding: 20px 0px;
+   width: 100%;
+}
+
+header .inner .main_menu .item .item__content .item__content__additional .inner{}
+
+header .inner .main_menu .item .item__content .item__content__additional .inner>p{
+    font-size: 12px;
+    color: #669900;
+
+}
+
+header .inner .main_menu .item .item__content .item__content__additional .inner>a{
+    font-size: 12px;
+    color:#999;
+    margin-top: 5px;
+    display: block;
+}
+
+header .inner .main_menu .item .item__content .item__content__additional .inner>a:hover{
+    text-decoration: underline;
+}
+
+header .badges{
+    position: absolute;
+    top: 150px;
+    right: 20px;
+}
+
+header .badges .badge{}
+
+header .badges .badge>a{
+    display: block;
+}
+
+header .badges .badge>a>img{}
+
+
+/* VISUAL */
+
+.visual{
+    background-image: url("../images/visual_bg.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    margin-top: 120px;
+}
+
+.visual .inner{
+    height: 646px;
+    position: relative;
+}
+
+.visual .inner .slogan{
+    opacity: 0;
     
+    position: absolute;
+    top: 88px;
+    transition: .4s;
 }
 
-header .inner .header__servemenu span{
-    margin-left: 10px;
+.visual .inner .slogan>img{
 
 }
 
+.visual .inner .slogan>.button{
+   
+    display: block;
+    width: 129px;
+    height: 38px;
+    border: 2px solid #1c3831;
+    border-radius: 3px;
+    line-height: 38px;
+    text-align: center;
+   
+    box-sizing: border-box;
 
-header .inner .header__servemenu>a:not(:nth-child(1))>li::before{
+    color: #1c3831;
+    margin-top: 30px;
+    /* transition: background-color .5s; */
+    transition: .5s;
+    opacity: 0;
     
-        content: "|";
-        color: rgb(206, 200, 193);
-        font-weight: 700;
-        padding: 0 15px;
+
+}
+
+.visual .inner .slogan>a.button:hover{
+    color: white;
+    background-color: #1c3831;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.visual .inner>.image{
+    position: absolute;
+}
+
+.visual .inner>.image.item1{
+    width: 260px;
+   
+    top: 88px;
+    right: 210px;
+    opacity: 0;
+    transition: .4s;
+}
+
+.visual .inner>.image.item2{
+    width: 590px;
+    top: 200px;
+    left: 30px;
+    opacity: 0;
+    transition: .4s;
+}
+
+.visual .inner>.image.item3{
+    width: 370px;
+    bottom: 50px;
+    right: -120px;
+    opacity: 0;
+    transition: .4s;
+}
+
+.visual .inner:hover .image.item1{
+    opacity: 1;
+    transition-delay: 0.4s;
+}
+
+.visual .inner:hover .image.item2{
+    opacity: 1;
+    transition-delay: 0.8s;
+}
+
+.visual .inner:hover .image.item3{
+    opacity: 1;
+    transition-delay: 1.2s;
+}
+
+.visual .inner:hover .slogan{
+    opacity: 1;
+}
+
+.visual .inner:hover .slogan .button{
+    opacity: 1;
+    transition-delay: 1.5s;
 }
