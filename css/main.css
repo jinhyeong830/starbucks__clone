@@ -15,10 +15,86 @@ a{
     position: relative;
     width: 1100px;
     margin: 0 auto;
-    
-
 }
+ .strong{
+    font-weight: 800;
+ }
 
+ .btn{
+    display: inline-block;
+    padding: 8px 20px;
+    box-sizing: border-box;
+    border: 2px solid currentColor;
+    /* currentColr: 부모가 가진 컬러값들을 상속받게? */
+    border-radius: 5px;
+ }
+
+ .btn--reverse{
+    background-color: #00704a;
+    border-color:#00704a ;
+    color: white;
+ }
+
+ .btn--reverse:hover{
+    text-decoration: underline;
+ }
+
+ .btn--white{
+    border-color: white;
+    color: white;
+ }
+
+ .btn--white:hover{
+    text-decoration: underline;
+ } 
+
+ .btn--lightgreen{
+    border-color: #00704a;
+    color: #00704a;
+    transition:background-color .4s;
+ }
+
+ .btn--lightgreen:hover{
+    background-color: #00704a;
+    color: white;
+    text-decoration: underline;
+ }
+
+ .btn--darkgreen{
+    border-color: #1c3831;
+    color: #1c3831;
+    transition:background-color .4s;
+ }
+ .btn--darkgreen:hover{
+    background-color: #1c3831;
+    color: white;
+    text-decoration: underline;
+ } 
+
+ .btn--gold{
+    border-color: #b9813e;
+    color: #b9813e;
+    transition: background-color .4s;
+ }
+
+ .btn--gold:hover{
+    background-color: #b9813e;
+    color: white;
+    text-decoration: underline;
+
+ }
+
+ .btn--black{
+    color: black;
+    border-color: black;
+    transition: background-color .4s;
+ }
+
+ .btn--black:hover{
+    background-color: black;
+    color: white;
+    text-decoration: underline;
+ }
 /* HEADER */
 header{
     z-index:1;
@@ -83,7 +159,6 @@ header .inner .sub_menu .menu li a:hover{
     text-decoration: underline;
 }
 
-
 /*search*/
 
 header .inner .search{
@@ -127,15 +202,11 @@ header .inner .main_menu{
     bottom: 0;
 }
 
-header .inner .main_menu .item{
-  
-}
+header .inner .main_menu .item{}
 
 header .inner .main_menu .item .item__name{
     padding: 10px 20px 34px 20px;
     font-size: 13px;
-
-
 }
 
 header .inner .main_menu .item:hover .item__name{
@@ -143,43 +214,35 @@ header .inner .main_menu .item:hover .item__name{
     Color: #669900;
     text-decoration: underline;
     cursor: pointer;
-
 }
-
 
 header .inner .main_menu .item .item__content{
     position: fixed;
     width: 100%;
     left: 0;
-    display: none;
-    
+    display: none;    
 }
 
 header .inner .main_menu .item:hover .item__content{
     position: fixed;
     width: 100%;
     left: 0;
-    display: block;
-   
+    display: block;  
 }
 
 header .inner .main_menu .item .item__content .item__content__menu{
     Background-color: #2c2a29;
     padding: 20px 0;
     width: 100%;
-    
 }
-
 
 header .inner .main_menu .item .item__content .item__content__menu .inner{
     display: flex;
     flex-wrap: wrap;
-   
 }
 header .inner .main_menu .item .item__content .item__content__menu .inner>li{
     width: 200px;
-    padding-right: 20px;
-   
+    padding-right: 20px; 
 }
 
 header .inner .main_menu .item .item__content .item__content__menu .inner>li>a{
@@ -193,9 +256,7 @@ header .inner .main_menu .item .item__content .item__content__menu .inner>li>a{
 header .inner .main_menu .item .item__content .item__content__menu .inner>li>a:hover{
     text-decoration: underline;
 }
-header .inner .main_menu .item .item__content .item__content__menu .inner>li>ul{
-   
-}
+header .inner .main_menu .item .item__content .item__content__menu .inner>li>ul{}
 
 header .inner .main_menu .item .item__content .item__content__menu .inner>li>ul>li{
     color: #999;
@@ -207,7 +268,7 @@ header .inner .main_menu .item .item__content .item__content__menu .inner>li>ul>
     text-decoration: underline;
     cursor:pointer;
 }
-
+/*main-dropdown*/
 header .inner .main_menu .item .item__content .item__content__additional{
     background-image: url("../images/main_menu_pattern.jpg");
     background-repeat: repeat;
@@ -266,35 +327,23 @@ header .badges .badge>a>img{}
 
 .visual .inner .slogan{
     opacity: 0;
-    
     position: absolute;
     top: 88px;
     transition: .4s;
 }
 
-.visual .inner .slogan>img{
+.visual .inner .slogan>img{}
 
-}
-
-.visual .inner .slogan>.button{
+.visual .inner .slogan>.btn{
    
     display: block;
     width: 129px;
     height: 38px;
-    border: 2px solid #1c3831;
-    border-radius: 3px;
-    line-height: 38px;
-    text-align: center;
-   
-    box-sizing: border-box;
-
     color: #1c3831;
     margin-top: 30px;
     /* transition: background-color .5s; */
     transition: .5s;
     opacity: 0;
-    
-
 }
 
 .visual .inner .slogan>a.button:hover{
@@ -352,7 +401,427 @@ header .badges .badge>a>img{}
     opacity: 1;
 }
 
-.visual .inner:hover .slogan .button{
+.visual .inner:hover .slogan .btn{
     opacity: 1;
     transition-delay: 1.5s;
+}
+
+/*section- NOTICE */
+.notice{}
+
+.notice .notice_line{
+    position: relative; /*기준을 세우는 것*/
+}
+
+.notice .notice_line .bg_left{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background-color: #111111;
+}
+
+.notice .notice_line .bg_right{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background-color: #f6f5ef;
+}
+
+.notice .notice_line .inner{
+    height: 62px;
+    display: flex;
+}
+
+.notice .notice_line .inner .inner__left{
+    position: relative;
+    width: 60%;
+    height: 100%;
+    background-color: #111111;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.notice .notice_line .inner .inner__left h1{
+    font-weight: bold;
+    position: absolute;
+    left: 0;/*.inner의 왼쪽에 붙도록*/
+}
+
+.notice .notice_line .inner .inner__left .swiper_container{
+    position: absolute;
+    left: 80px;
+    flex-grow: 1;/*화면 넓이에 따라서 길이가 늘어나도록,*/
+}
+
+.notice .notice_line .inner .inner__left a{
+    position: absolute;
+    right: 20px;
+    color: white;
+}
+
+.notice .notice_line .inner .inner__left a span{
+    font-size: 36px;
+    vertical-align: bottom;
+}
+
+.notice .notice_line .inner .inner__right{
+    position: relative;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #111111;
+}
+
+.notice .notice_line .inner .inner__right h1{
+    position: absolute;
+    font-weight: bold;
+    right:150px;
+}
+
+.notice .notice_line .inner .inner__right a{
+    position: absolute;
+    right: 30px;
+    color: #111111;
+}
+
+.notice .notice_line .inner .inner__right a span{
+    font-size: 36px;
+    vertical-align: bottom; 
+}
+
+/* section-REWARDS */
+.rewards{
+    background-color: #1e3932;
+}
+
+.rewards .inner{
+    padding: 30px 0 40px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.rewards .inner>a{}
+
+.rewards .inner>a>img{
+    width: 176px;
+    display: block;
+}
+
+.rewards .inner .rewards__items{
+    flex-grow: 1;
+}
+
+.rewards .inner .rewards__items .rewards__items__register{
+    position: relative; /*button위치 기준이 되라고*/
+    /*가운데 수평선*/
+    box-shadow: 0 0.3px #c8c8c8;
+    padding-bottom: 12px;
+}
+
+.rewards .inner .rewards__items .rewards__items__register p{
+    display: block;/*마진 패딩 값을 먹게 하기 위해*/
+    font-size: 17px;
+    color: white;
+}
+
+.rewards .inner .rewards__items .rewards__items__register p.subject{
+    font-size: 26px;
+    margin-bottom:10px;
+}
+
+.rewards .inner .rewards__items .rewards__items__register .buttons{
+    position: absolute;
+    right: 0;
+    bottom: 12px;
+    
+}
+
+.rewards .inner .rewards__items .rewards__items__register .buttons a{}
+
+.rewards .inner .rewards__items .rewards__items__card{
+    position: relative;
+}
+
+.rewards .inner .rewards__items .rewards__items__card p{
+    padding-top: 20px;
+    font-size: 14px;
+    color: white;
+}
+
+.rewards .inner .rewards__items .rewards__items__card .buttons{
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+
+/*section-peru*/
+.peru{
+    position: relative;
+    background-image: url("../images/peru_bg.jpg") ;
+    height: 570px;
+    overflow: hidden;
+}
+
+/*tiger bird image*/
+
+.peru::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    background-image: url("../images/peru_bg_left.png");
+    background-size:cover ;
+    background-repeat: no-repeat;
+    width: 360px;
+    height: 360px;
+}
+
+.peru::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background-image: url("../images/peru_bg_right.png");
+    background-size:cover ;
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 350px;
+}
+
+.peru .inner{
+    height: inherit;
+}
+
+.peru .inner .img_product{
+    position: absolute;
+    display: block;
+    width: 310px;
+    top: 70px;
+    left: 210px;
+    transform: translate(-300px,0);
+    transition: 2.5s;
+    opacity: 0;
+}
+
+.peru .inner:active .img_product{
+    transform: translate(0px,0);
+    opacity: 1;
+}
+
+.peru .inner .peru__contents{
+    position: absolute;
+    top: 160px;
+    right: 50px;
+    transform: translate(300px,0);
+    transition: 2.5s;
+    opacity: 0;
+}
+
+.peru .inner:active .peru__contents{
+    transform: translate(0px,0);
+    opacity: 1;
+}
+
+.peru .inner .peru__contents>img{
+    width: 427px;
+}
+
+.peru .inner .peru__contents .btn{
+    display: block;
+    width: 125px;
+    margin-top: 10px; 
+}
+
+/* section-INDONESIA */
+.indonesia{
+    background-image: url("../images/indonesia_bg.jpg");
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+.indonesia::after{
+    content: "";
+    background-image: url("../images/indonesia_bg_right.png");
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+}
+
+.indonesia::before{
+    content: "";
+    background-image: url("../images/indonesia_bg_left.png");
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 283px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+}
+
+
+.indonesia .inner{}
+
+.indonesia .inner .indonesia__img{
+    position: absolute;
+    left: -500px;
+}
+
+.indonesia .inner .indonesia__title{
+    position: absolute;
+    width: 496px;
+    height: 115px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+.indonesia .inner>.btn{
+    position: absolute;
+    bottom: 75px;
+    left: 245px;
+}
+
+/* PICK YOUR FAVORITE */
+.favorite{
+    height: 800px;
+    background-image: url("../images/fav_bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.favorite .inner{
+    height: inherit;
+}
+
+.favorite .inner>img{
+    position: absolute;
+}
+
+.favorite .inner>img:nth-child(1){
+    top: 100px;
+    left:154px;
+    transition: 1.4s;
+    transform: translate(-400px,0);
+    opacity: 0;
+}
+
+.favorite .inner:hover>img:nth-child(1){
+    transform: translate(0,0);
+    opacity: 1;
+}
+
+.favorite .inner>img:nth-child(2){
+    left: 50px;
+    bottom: 300px;
+    transition: 2.8s;
+    transform: translate(-400px,0);
+    opacity: 0;
+}
+
+.favorite .inner:hover>img:nth-child(2){
+    transform: translate(0,0);
+    opacity: 1;
+}
+
+.favorite .inner>img:nth-child(3){
+    right: -130px;
+    top: 50px;
+}
+
+.favorite .inner>a.btn{
+    transition:background-color .4s;
+    position: absolute;
+    bottom: 100px;
+    left: 280px;
+}
+.favorite .inner>a.btn:hover{
+    background-color: white;
+    color: #111111;
+}
+
+/* section-MAGAZINE */
+.magazine{
+    height: 400px;
+    background-image: url("../images/magazine_bg.png");
+    background-size: contain;
+}
+
+.magazine .inner{
+    height: inherit;
+}
+
+.magazine .inner .magazine__title{
+    position: absolute;
+    top: 120px;
+    left: 50px;
+}
+
+.magazine .inner .magazine__img{
+
+    right: 50px;
+    top: 0;
+    position: absolute;
+    
+}
+
+.magazine .inner>a.btn{
+    position: absolute;
+    bottom: 120px;
+    left: 350px;
+}
+
+/* section-FIND_STORE */
+
+.find_store{
+    height: 400px;
+    background-image: url("../images/store_bg.jpg");
+    overflow: hidden;
+}
+
+.find_store .inner{
+    height: inherit;
+}
+
+.find_store .inner>*{
+    position: absolute;
+}
+.find_store .inner>img:nth-child(1){
+
+}
+
+.find_store .inner>img:nth-child(2){}
+
+.find_store .inner>img:nth-child(3){
+    top:-50px ;
+    right: 290px;
+}
+
+.find_store .inner>img:nth-child(4){
+    bottom: 0;
+    right: 0;
+}
+
+.find_store .inner>a.btn{}
+
+/* FOOTER */
+footer{
+    height: 600px;
+    background-color: black;
 }
