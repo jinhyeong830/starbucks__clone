@@ -71,7 +71,7 @@ a{
  }
  .btn--darkgreen:hover{
     background-color: #1c3831;
-    color: white;
+     color:white ;
     text-decoration: underline;
  } 
 
@@ -317,7 +317,6 @@ header .badges .badge>a{
 
 .visual .inner{
     height: 646px;
-    position: relative;
 }
 
 .visual .inner .slogan{
@@ -328,22 +327,13 @@ header .badges .badge>a{
 }
 
 .visual .inner .slogan>.btn{
-   
     display: block;
     width: 129px;
     height: 38px;
-    color: #1c3831;
     margin-top: 30px;
     /* transition: background-color .5s; */
     transition: .5s;
     opacity: 0;
-}
-
-.visual .inner .slogan>a.button:hover{
-    color: white;
-    background-color: #1c3831;
-    text-decoration: underline;
-    font-weight: bold;
 }
 
 .visual .inner>.image{
@@ -352,7 +342,6 @@ header .badges .badge>a{
 
 .visual .inner>.image.item1{
     width: 260px;
-   
     top: 88px;
     right: 210px;
     opacity: 0;
@@ -637,6 +626,9 @@ header .badges .badge>a{
     overflow: hidden;
     position: relative;
 }
+.indonesia .inner{
+    height: inherit;
+}
 .indonesia::after{
     content: "";
     background-image: url("../images/indonesia_bg_right.png");
@@ -665,7 +657,8 @@ header .badges .badge>a{
 
 .indonesia .inner .indonesia__img{
     position: absolute;
-    right: 100px;
+    right: -535px;
+    bottom: -10px;
   
 }
 
@@ -744,7 +737,9 @@ header .badges .badge>a{
 .magazine{
     height: 400px;
     background-image: url("../images/magazine_bg.png");
-    background-size: contain;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position:bottom;
 }
 
 .magazine .inner{
@@ -758,13 +753,10 @@ header .badges .badge>a{
 }
 
 .magazine .inner .magazine__img{
-
     right: 50px;
     top: 0;
     position: absolute;
     transition: 1.5s;
-    opacity: 0;
-    
 }
 
 .magazine .inner:hover .magazine__img{
@@ -792,28 +784,18 @@ header .badges .badge>a{
 .find_store .inner>*{
     position: absolute;
 }
-.find_store .inner>img:nth-child(1){
-    
+
+
+.find_store .inner>img:nth-child(1){   
     left: 160px;
     transition: 1.7s;
-    opacity: 0;
 }
 
 .find_store .inner>img:nth-child(2){
     left: 390px;
     top: 149px;
     transition:1.5s;
-    opacity: 0;
 }
-
-.find_store .inner:hover>img:nth-child(1){
-    opacity: 1;
-}
-
-.find_store .inner:hover>img:nth-child(2){
-    opacity: 1;
-}
-
 
 .find_store .inner>img:nth-child(3){
     top:-50px ;
@@ -842,7 +824,16 @@ header .badges .badge>a{
     bottom: 100px;
     transition: 2.7s;
 }
-.find_store>.inner>.ani--transform{
+/* to common? */
+.ani--opacity{
+    opacity: 0;
+}
+
+.find_store .inner:hover .ani--opacity{
+    opacity: 1;
+}
+
+.ani--transform{
     opacity: 0;
     transform: translate(500px,0);
 }
@@ -906,7 +897,6 @@ footer .inner .copyright .copyright__terms>li>a{
     color: #cccccc;
     font-size: 12px;
     padding: 10px 0;
-   
 }
 
 footer .inner .copyright .copyright__terms>li:not(:last-child)::after{
@@ -936,7 +926,6 @@ footer .inner .copyright>.song_davidhosub>li:not(:last-child):after{
     color: #323232;
     margin:0 7px;
 }
-
 
 footer .last_String{
     text-align: center;
